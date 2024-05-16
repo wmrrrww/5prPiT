@@ -20,19 +20,11 @@ namespace _5prPiT
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static MainWindow _context;
-
+        
         public MainWindow()
         {
             InitializeComponent();
-            _context = this;
-        }
-
-        public static MainWindow GetContext()
-        {
-            if (_context == null)
-                _context = new MainWindow();
-            return _context;
+            MainFrame.Source = new Uri("AuthPage.xaml", UriKind.Relative);
         }
     }
 }

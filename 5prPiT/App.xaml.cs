@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace _5prPiT
@@ -17,8 +12,10 @@ namespace _5prPiT
         {
             base.OnStartup(e);
 
+            MainWindow mainWindow = new MainWindow();
             AuthPage authPage = new AuthPage();
-            authPage.Show();
+            mainWindow.Content = authPage;
+            mainWindow.Show();
         }
     }
 }
